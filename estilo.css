@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+p{
+    background-color:  chocolate;
+    font-style: bold;
+}
+body{
+    justify-content: left;
+    align-items: left;
+  /*  min-height: 80vh; 
+      display: flex;*/
+}
+img{
+    width:200 ;
+    alt  : "Logo" ;
+    float:"left";
+    box-shadow: 3px 3px 3px 8px #fcd4a6;
+}
+article{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    min-height: 5vh;     
+    background-color:  chocolate;
+    box-shadow: 3px 3px 3px 8px #fcd4a6; 
+}
+section{
+    display: flex;
+    width: 400;
+    height: 330;
+}
+section img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+/*   <div class="clase_div"  > */
+/* De esta forma se llama a la clase y puede afectar a múltiples elementos*/
+.clase_div{
+color: chocolate;
+background-color: beige;
+width: 80%;
+}
+/* Hacer responsive utilizando flex para repartir el contenido y estirarlo*/
+.menu{
+    flex-basis: 20rem; /* el tamaño que tenga idealmente */
+    flex-grow: 1;      /* y cuando pueda que se expanda al 100% */
+}
+.gallery{
+    flex-basis: 0;   
+    flex-grow: 999;  /* sigmifica que aggarre todo el ancho que pueda */
+    min-width: 60%;  /* que tenga un tamaño mpinimo del 60%  */
+}
+/* optimizando ya que tiene una lista y aplica para cada elemento de la lista  */
+.menu{    
+    ul{
+        display: flex;
+        flex-wrap: wrap;  /* se wrapee para generar multiples líneas  */
+    }
+    li{    /* a cada uno de list it   */
+        flex-grow: 1;
+        flex-basis: 20rem;
+    }
+}
+/*
+div{
+    box-shadow: 2px 2px 7px 1px #fae7bf;
+    background-image: url("imagenes/logo.png") non-repeat ;
+}
+*/
+.clase_div1{
+    border: 10px solid rgba(255, 0, 43, 0.877);
+    background-color: black;
+    height: 120px;
+    align-items: center;
+    
+    }
+.clase_div2{
+    border: 10px solid rgba(255, 0, 43, 0.877);
+    background-color: rgb(240, 238, 159);
+    height: 120px;
+    align-items: center;
+}
